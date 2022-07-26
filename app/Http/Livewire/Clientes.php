@@ -30,7 +30,7 @@ class Clientes extends Component
         if(strlen($this->search) > 0){
             $data = cliente::where('nombre', 'like', '%' . $this->search . '%')->paginate($this->pagination);
         }else{
-            $data = cliente::orderBy('id', 'desc')->paginate($this->pagination);
+            $data = cliente::orderBy('id', 'asc')->paginate($this->pagination);
         }
 
         return view('livewire.cliente.clientes', ['clientes' => $data])

@@ -29,7 +29,7 @@ class Categorias extends Component
         if(strlen($this->search) > 0){
             $data = categoria::where('nombre', 'like', '%' . $this->search . '%')->paginate($this->pagination);
         }else{
-            $data = categoria::orderBy('id', 'desc')->paginate($this->pagination);
+            $data = categoria::orderBy('id', 'asc')->paginate($this->pagination);
         }
 
         return view('livewire.categoria.categorias', ['categorias' => $data])
