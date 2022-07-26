@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreatePlansTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('plans', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->text('descripcion');
+            $table->integer('tarifa');
+
+            $table->unsignedBigInteger('promocion_id');
+            $table->foreign('promocion_id')->references('id')->on('promocions')->onDelete('cascade');
+            
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('plans');
+    }
+}
