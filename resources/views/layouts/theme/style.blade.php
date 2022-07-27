@@ -78,7 +78,7 @@
     }
 
     .oscuro{
-        background-color: #1f1f1f;
+        background-color: #a2b4bd;
         color: #ffffff !important;
     }
 

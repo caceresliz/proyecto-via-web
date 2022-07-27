@@ -50,9 +50,13 @@
                 <ul class="tabs tab-pills">
                     <li>
                         <a href="{{url('telefonoclientes')}}" class="btn btn-primary" data-active="true">Telefono</a>
-                    </li>}
+                    </li>
                 </ul>
             </div>
+            <!-- Contador de visitas -->
+                <center><a href="https://websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
+                <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=3940"></a><br><a href='https://websmultimedia.com/contador-de-visitas-gratis'>Contador</a><br><a href='http://jackrussell.es'></a></center>
+            <!-- Fin Contador de visitas -->
         </div>
     </div>
     @include('livewire.cliente.form')
