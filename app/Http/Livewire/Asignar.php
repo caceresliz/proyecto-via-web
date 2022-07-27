@@ -12,7 +12,7 @@ class Asignar extends Component
 {
     use WithPagination;
     public $role, $permisosSelected =[], $old_permissions = [], $componentName;
-    private $pagination = 5;
+    private $pagination = 10;
 
     public function mount(){
         $this->componentName = 'Asignar Permiso';
@@ -27,7 +27,7 @@ class Asignar extends Component
     public function render()
     {
         $permisos = Permission::select('name','id',DB::raw("0 as checked"))
-            ->orderBy('name','asc')
+            ->orderBy('id','asc')
             ->paginate($this->pagination);
 
         if ($this->role != 'Elegir'){

@@ -28,7 +28,7 @@ class Almacens extends Component
         if(strlen($this->search) > 0){
             $data = almacen::where('direccion', 'like', '%' . $this->search . '%')->paginate($this->pagination);
         }else{
-            $data = almacen::orderBy('id', 'desc')->paginate($this->pagination);
+            $data = almacen::orderBy('id', 'asc')->paginate($this->pagination);
         }
 
         return view('livewire.almacen.almacen', ['almacenes' => $data])
@@ -84,7 +84,7 @@ class Almacens extends Component
 
         $almacen->save();
         $this->resetUI();
-        $this->emit('almacen-updated', 'Almacen actualizado');
+        $this->emit('almacen-updated', 'Almacen actualizado!');
     }
 
     public function resetUI(){
@@ -102,6 +102,6 @@ class Almacens extends Component
         /* dd($categoria); */
         $categoria->delete();
         $this->resetUI();
-        $this->emit('almacen-deleted', 'Almacen eliminado');
+        $this->emit('almacen-deleted', 'Almacen eliminado!');
     }
 }

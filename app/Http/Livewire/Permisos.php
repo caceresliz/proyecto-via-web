@@ -26,10 +26,11 @@ class Permisos extends Component
 
     public function render()
     {
-        /*if (strlen($this->search >0))
+        if (strlen($this->search >0)){
             $permisos = Permission::where('name','like','%'.$this->search.'%')->paginate($this->pagination);
-        else*/
-            $permisos = Permission::orderBy('name','asc')->paginate($this->pagination);
+        }else{
+            $permisos = Permission::orderBy('id','asc')->paginate($this->pagination);
+        }
         return view('livewire.permisos.permisos',[
             'permisos'=>$permisos
         ])
@@ -49,7 +50,7 @@ class Permisos extends Component
         ];
         $this->validate($rules,$messages);
         Permission::create(['name'=>$this->name]);
-        $this->emit('permiso-added','Se registro el Permiso');
+        $this->emit('permiso-added','Permiso registrado!');
         $this->resetUI();
     }
 
@@ -75,7 +76,7 @@ class Permisos extends Component
         $permiso->name = $this->name;
         $permiso->save();
         $this->resetUI();
-        $this->emit('permiso-updated', 'Permiso actualizada!');
+        $this->emit('permiso-updated', 'Permiso actualizado!');
     }
     public function resetUI(){
         $this->name = '';
@@ -97,7 +98,7 @@ class Permisos extends Component
         }
         $rol->delete();
         $this->resetUI();
-        $this->emit('permiso-deleted', 'Permiso eliminada');
+        $this->emit('permiso-deleted', 'Permiso eliminado');
     }
 
 }

@@ -51,11 +51,5 @@ Route::middleware(['auth'])->group(function (){
         Route::get('asignar',\App\Http\Livewire\Asignar::class);
         Route::get('users',\App\Http\Livewire\Users::class);
     });
-    Route::group(['middleware' => ['role:TECNICO']], function () {
-        Route::get('promociones', Promocions::class);
-        Route::get('productos', Product::class);
-        Route::get('plan', Plans::class);
-        Route::get('actividades', Actividades::class);
-    });
 
 });

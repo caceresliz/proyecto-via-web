@@ -12,7 +12,7 @@ class Categorias extends Component
     use WithPagination;
 
     public $nombre, $search, $descripcion, $selected_id, $pageTitle, $componentName;
-    private $pagination = 1;
+    private $pagination = 5;
 
     public function mount(){
         $this->pageTitle = 'Listado';
@@ -108,6 +108,6 @@ class Categorias extends Component
         /* dd($categoria); */
         $categoria->delete();
         $this->resetUI();
-        $this->emit('categoria-deleted', 'Categoria eliminada');
+        $this->emit('categoria-deleted', 'Categoria eliminada!');
     }
 }

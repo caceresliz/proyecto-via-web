@@ -29,10 +29,12 @@ class Roles extends Component
 
     public function render()
     {
-        /*if (strlen($this->search >0))
+        if (strlen($this->search >0)){
             $roles = Role::where('name','like','%'.$this->search.'%')->paginate($this->pagination);
-        else*/
-            $roles = Role::orderBy('name','asc')->paginate($this->pagination);
+        }else{
+            $roles = Role::orderBy('id','asc')->paginate($this->pagination);
+        }
+
         return view('livewire.rol.roles',[
             'roles'=>$roles
         ])
@@ -52,7 +54,7 @@ class Roles extends Component
         ];
         $this->validate($rules,$messages);
         Role::create(['name'=>$this->name]);
-        $this->emit('rol-added','Se registro el Rol');
+        $this->emit('rol-added','Rol Registrado!');
         $this->resetUI();
     }
 
@@ -78,7 +80,7 @@ class Roles extends Component
         $rol->name = $this->name;
         $rol->save();
         $this->resetUI();
-        $this->emit('rol-updated', 'Rol actualizada!');
+        $this->emit('rol-updated', 'Rol actualizado!');
     }
     public function resetUI(){
         $this->name = '';
@@ -100,7 +102,7 @@ class Roles extends Component
         }
         $rol->delete();
         $this->resetUI();
-        $this->emit('rol-deleted', 'Rol eliminada');
+        $this->emit('rol-deleted', 'Rol eliminado!');
     }
 
 }

@@ -17,7 +17,6 @@ class Clientes extends Component
     public function mount(){
         $this->pageTitle = 'Listado';
         $this->componentName = 'Clientes';
-        
     }
 
     public function paginationView()
