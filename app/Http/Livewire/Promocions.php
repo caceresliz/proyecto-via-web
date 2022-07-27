@@ -28,7 +28,7 @@ class Promocions extends Component
         if(strlen($this->search) > 0){
             $data = promocion::where('nombre', 'like', '%' . $this->search . '%')->paginate($this->pagination);
         }else{
-            $data = promocion::orderBy('id', 'desc')->paginate($this->pagination);
+            $data = promocion::orderBy('id', 'asc')->paginate($this->pagination);
         }
 
         return view('livewire.promocion.promocion', ['promociones' => $data])
@@ -111,6 +111,6 @@ class Promocions extends Component
         /* dd($categoria); */
         $promocion->delete();
         $this->resetUI();
-        $this->emit('promocion-deleted', 'Promocion eliminada');
+        $this->emit('promocion-deleted', 'Promocion eliminada!');
     }
 }
