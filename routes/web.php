@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Livewire\Actividades;
 use App\Http\Livewire\Almacens;
 use Illuminate\Support\Facades\Route;
@@ -9,6 +10,8 @@ use App\Http\Livewire\Product;
 use App\Http\Livewire\Promocions;
 use App\Http\Livewire\Reportes;
 use App\Http\Livewire\Servicios;
+use FontLib\Table\Type\name;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +24,9 @@ use App\Http\Livewire\Servicios;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
+//Route::get('/', function () {return view('home');});
+Route::get('/', function () {return view('inicio');});
+route::post('/logout','Auth\LoginController@logout')->name('logout');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
