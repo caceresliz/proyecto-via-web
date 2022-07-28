@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 //Route::get('/', function () {return view('home');});
-Route::get('/', function () {return view('inicio');});
+Route::get('/', function () {return view('inicio');})->name('inicio');
 route::post('/logout','Auth\LoginController@logout')->name('logout');
 Auth::routes();
 

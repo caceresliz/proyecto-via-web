@@ -20,29 +20,59 @@
 <script src="{{asset('plugins/nicescroll/nicescroll.js')}}"></script>
 <script src="{{asset('plugins/currency/currency.js')}}"></script>
 <script>
-    function noty(msg, option = 1){
+    function noty(msg, option = 1) {
         Snackbar.show({
-           text: msg.toUpperCase(),
-           actionText: 'Cerrar',
-           actionTextColor: '#fff',
-           backgroundColor: option == 1 ? '#3b3f5c' : '#e7515a',
-           pos: 'top-right '
+            text: msg.toUpperCase(),
+            actionText: 'Cerrar',
+            actionTextColor: '#fff',
+            backgroundColor: option == 1 ? '#3b3f5c' : '#e7515a',
+            pos: 'top-right '
         });
     }
+   
 
-    function cambiarModo(){
+    function cambiarModo() {
         var cuerpo = document.body;
-        cuerpo.classList.toggle("oscuro");
+        cuerpo.classList.toggle("darkMode");
 
         var header = document.getElementsByClassName("header navbar navbar-expand-sm")[0];
-        header.classList.toggle("oscuro");
-        
+        header.classList.toggle("darkMode");
+
 
         var nave = document.getElementById("compactSidebar");
         nave.classList.toggle("claro");
         console.log(nave);
     }
+    const tema=document.querySelector('#tema');
+    var cuerpo = document.body;
+    var header = document.getElementsByClassName("header navbar navbar-expand-sm")[0];
+    var nave = document.getElementById("compactSidebar");
+    var tabla = document.getElementsByClassName("text-white")[0];
+    load();
+    tema.addEventListener('click', e=>{
+        cuerpo.classList.toggle("darkMode");
+        header.classList.toggle("darkMode");
+        nave.classList.toggle("claro");
+        tabla.classList.toggle("claro");
+        store(cuerpo.classList.contains('darkMode'));
+    })
+    function load(){
+        const darkMode= localStorage.getItem('darkMode');
+
+        if(!darkMode){
+            store('false');
+        }
+        else if(darkMode=='true'){
+            cuerpo.classList.add('darkMode');
+            header.classList.add('darkMode');
+            nave.classList.add('claro');
+            tabla.classList.add('claro');
+        }
+    }
+    function store(value){
+        localStorage.setItem('darkMode',value);
+    }
 </script>
-    
+
 
 @livewireScripts

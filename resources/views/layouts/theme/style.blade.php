@@ -58,17 +58,17 @@
 
     /* sidebar background */
     .sidebar-theme #compactSidebar {
-        background: #191e3a !important;
+        background: #191e3a ;
     }
 
     /* sidebar collapse background */
     .header-container .sidebarCollapse{
-        color: #3b3f5c !important;
+        color: #3b3f5c ;
     }
 
     .navbar .navbar-item .nav-item form.form-inline input.search-form-control {
         font-size: 15px;
-        background-color: #3b3f5c !important;
+        background-color: #3b3f5c;
         padding-right: 40px;
         padding-top: 12px;
         border: none;
@@ -77,14 +77,38 @@
         border-radius: 30px;
     }
 
-    .oscuro{
-        background-color: #a2b4bd;
-        color: #ffffff !important;
+    .darkMode {
+        background-color: #a2b4bd !important;
+        color: #ffffff ;
     }
+    .darkMode div span.input-group-text{
+        background-color: #868686 !important;
+        color: white;
+    }
+    
+    .darkMode div.widget-chart-one{  
+        background-color: #F5EFEE !important;
+        color: white;
+    }
+    .darkMode li a.tabmenu{
+        background-color: #868686 !important;
+        color: white;
+    }
+    .darkMode td a.btn{
+        background-color: #868686 !important;
+        color: white;
+    }
+
+
 
     .claro{
         background-color: #868686 !important;
         color: white;
+    }
+    
+    
+    body{
+        transition: all 0.4s; 
     }
 </style>
 

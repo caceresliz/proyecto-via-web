@@ -2,7 +2,7 @@
     <header class="header navbar navbar-expand-sm">
         <ul class="navbar-item flex-row">
             <li class="nav-item theme-logo">
-                <a href="index.html">
+                <a href="{{ route('inicio') }}">
                 <img src="assets/img/customer.png">
                     <b style="font-size: 19px; color: #3b3f5c">SUPPORT SATELITAL DEALER</b>
                 </a>
@@ -61,7 +61,7 @@
             </li>-->
         </ul>
         
-        <button type="button" class="btn btn-success mr-3" onclick="cambiarModo()">Oscuro / Claro</button>
+        <button id="tema" type="button" class="btn btn-success mr-3" >Oscuro / Claro</button>
 
     </header>
 </div>
