@@ -1,5 +1,6 @@
 @extends('layouts.theme.style')
-
+<title>DualSupport</title>
+<link rel="icon" type="image/x-icon" href="{{asset('assets/img/favicon.ico')}}"/>
 
 <div class="container mt-5">
     <div class="row justify-content-center">

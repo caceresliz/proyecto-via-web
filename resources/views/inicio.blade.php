@@ -7,7 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-
+    <title>DualSupport</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('assets/img/favicon.ico')}}"/>
 
     @include('layouts.theme.style')
 </head>
@@ -41,10 +42,6 @@
                     <a href="{{ url('/home') }}" class="btn btn-primary btn-lg">Home</a>
                     @else
                     <a href="{{ route('login') }}" class="btn btn-primary btn-lg">Iniciar sesion</a>
-
-                    @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="btn btn-primary btn-lg">Registrarse</a>
-                    @endif
                     @endauth
                     <!--<a class="btn btn-primary btn-lg" href="#" role="button">Iniciar sesion &raquo;</a> -->
                 </p>
@@ -89,9 +86,7 @@ DESCUENTOS EN SUS MENSUALIDADES:
 
     </main>
 
-    <footer class="container">
-        <p>&copy; Company 2017-2018</p>
-    </footer>
+    @include('layouts.theme.footer')
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
