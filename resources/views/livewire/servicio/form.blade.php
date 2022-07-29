@@ -60,7 +60,7 @@
             <select wire:model='user_id' class="form-control">
                 <option value="Elegir" disabled>
                     @foreach ($tecnicos as $tecnico)
-                        <option value="{{$tecnico->id}}">{{$tecnico->nombre}}</option>
+                        <option value="{{$tecnico->id}}">{{$tecnico->name}}</option>
                     @endforeach
                 </option>
             </select>

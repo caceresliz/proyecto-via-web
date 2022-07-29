@@ -18,7 +18,7 @@ class Actividades extends Component
 
     public function mount(){
         $this->pageTitle = 'Listado';
-        $this->componentName = 'Productos';
+        $this->componentName = 'Actividades';
         $this->servicio_id = 'Elegir';
     }
 

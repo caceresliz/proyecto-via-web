@@ -26,6 +26,8 @@
         <div class="jumbotron">
             <div class="container">
                 <br>
+                <hr>
+                <hr>
                 <h1 class="display-3">Inter Satelital Support</h1>
                 <pre>Ínter Satelital Es Televisión Prepago HD Para todo Bolivia. Esta empresa está regulada y fiscalizada por la ATT.
 
@@ -53,30 +55,18 @@
             <div class="row">
                 <div class="col-md-4">
                     <h2>Planes de internet</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>Elige el plan que más te convenga Experiencia total. </p>
+                    <p><a class="btn btn-secondary" href="https://www.facebook.com/InterSatelital.Support" role="button">Ver más</a></p>
                 </div>
                 <div class="col-md-4">
                     <h2>Planes de Tv satelital</h2>
-                    <p>Plan Full HD por solo 195 Bs. ¡Tus películas favoritas en HD! Conoce nuestro plan InterSatelital en HD. Disfruta con tu familia los 38 canales en la mejor definición. Podrás ver los mejores partidos y los últimos estrenos desde la comodidad de tu casa</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>Televisión Satelital HD con la mejor señal para todo Bolivia.</p>
+                    <p><a class="btn btn-secondary" href="https://www.facebook.com/InterSatelital.Support" role="button">Ver más</a></p>
                 </div>
                 <div class="col-md-4">
                     <h2>Soporte</h2>
-                    <p>Solo disponible para usuarios con  de 2 mes sin el servicio (61 días)
-
-DESCUENTOS EN SUS MENSUALIDADES:
-
-1 Equipo:   paga 129 Bs. Durante 2 meses.
-2 Equipos: paga 165 Bs. Durante 2 meses.
-3 Equipos: paga 201 Bs. Durante 2 meses.
-
-¿CÓMO ADQUIRIR EL DESCUENTO?⁉️
-
-↪Solicitar su descuento ANTES DE CANCELAR su mensualidad llamando a nuestro personal autorizado
- Cel. o WhatsApp: 69162811 - 68753388
- teléfono:  33239186</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>Solo disponible para usuarios con  de 2 mes sin el servicio (61 días)</p>
+                    <p><a class="btn btn-secondary" href="https://www.facebook.com/InterSatelital.Support" role="button">Ver más</a></p>
                 </div>
             </div>
 

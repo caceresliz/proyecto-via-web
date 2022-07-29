@@ -36,7 +36,7 @@ class Servicios extends Component
             $data = servicio::join('plans as p','p.id','servicios.plan_id')
                     ->join('users as u','u.id','servicios.user_id')
                     ->join('clientes as c','c.id','servicios.cliente_id')
-                    ->select('servicios.*','p.nombre as plan','u.nombre as tecnico','c.nombre as cliente')
+                    ->select('servicios.*','p.nombre as plan','u.name as tecnico','c.nombre as cliente')
                     ->where('servicios.codigo','like','%' . $this->search . '%')
                     ->orWhere('p.nombre','like','%' . $this->search . '%')
                     ->orWhere('u.nombre','like','%' . $this->search . '%')
@@ -46,13 +46,13 @@ class Servicios extends Component
             $data = servicio::join('plans as p','p.id','servicios.plan_id')
                     ->join('users as u','u.id','servicios.user_id')
                     ->join('clientes as c','c.id','servicios.cliente_id')
-                    ->select('servicios.*','p.nombre as plan','u.nombre as tecnico','c.nombre as cliente')
+                    ->select('servicios.*','p.nombre as plan','u.name as tecnico','c.nombre as cliente')
                     ->paginate($this->pagination);
         }
         return view('livewire.servicio.servicios', [
             'servicios' => $data,
             'planes' => plan::orderBy('nombre','asc')->get(),
-            'tecnicos' => User::orderBy('nombre','asc')->get(),
+            'tecnicos' => User::select('*')->where('rol','=','TECNICO')->orderBy('name','asc')->get(),
             'clientes' => cliente::orderBy('nombre','asc')->get()
         ])
         ->extends('layouts.theme.app')

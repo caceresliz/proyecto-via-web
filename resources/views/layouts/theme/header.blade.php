@@ -4,7 +4,7 @@
             <li class="nav-item theme-logo">
                 <a href="{{ route('inicio') }}">
                 <img src="assets/img/customer.png">
-                    <b style="font-size: 19px; color: #3b3f5c">SUPPORT SATELITAL DEALER</b>
+                    <b style="font-size: 19px; color: #3b3f5c">INTER SATELITAL SUPPORT</b>
                 </a>
             </li>
         </ul>

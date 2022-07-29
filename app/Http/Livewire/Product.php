@@ -20,7 +20,7 @@ class Product extends Component
         $this->pageTitle = 'Listado';
         $this->componentName = 'Productos';
         $this->categoria_id = 'Elegir';
-        $this->almacen_id = 'Elegir';
+        /*$this->almacen_id = 'Elegir';*/
         $this->actividad_id = 'Elegir';
     }
 
@@ -50,7 +50,8 @@ class Product extends Component
         return view('livewire.producto.product', [
             'productos' => $data,
             'categorias' => categoria::orderBy('nombre', 'asc')->get(),
-            'almacenes' => almacen::orderBy('direccion','asc')->get()
+            'almacenes' => almacen::select('*')->orderBy('direccion','asc')->get()
+            
         ])
         ->extends('layouts.theme.app')
         ->section('content');

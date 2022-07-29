@@ -45,10 +45,11 @@ class Viaticos extends Component
     public function Consultar(){
         $fi = Carbon::parse($this->fromDate)->format('y-m-d');
         $ff = Carbon::parse($this->toDate)->format('y-m-d');
-
+        $idu = $this->userid;
 
         $this->viaticos = viatico::join('users as u','u.id','=','viaticos.user_id')
             ->select('viaticos.*','u.name as name','u.apellido as apellido')
+            ->where("u.id", "=", $idu)
             ->get();
         $this->viaticos->whereBetween('viaticos.created_at',[$fi,$ff])
             ->where('viaticos.user_id','users.id'.$this->userid);
